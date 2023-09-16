@@ -2,7 +2,6 @@ import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes, mark_inset
-from matplotlib.patches import Rectangle
 
 plt.style.use('tp1.mplstyle')
 
@@ -74,12 +73,6 @@ ax.legend(loc='lower left', fontsize="7")
 original_xlim = ax.get_xlim()
 original_ylim = ax.get_ylim()
 
-# # Dibujar el rectángulo de zoom en el gráfico principal
-# zoom_start = -0.025
-# zoom_end = 0.1
-# rect = Rectangle((zoom_start, 0.85), zoom_end - zoom_start, 1.22, fill=None, color='gray', alpha=0.5)
-# ax.add_patch(rect)
-
 # Establecer los límites en el gráfico principal para mostrar el rectángulo
 ax.set_xlim(original_xlim)
 ax.set_ylim((-1.25, 1.25))
@@ -100,5 +93,4 @@ mark_inset(ax, axins, loc1=1, loc2=4, fc="none", ec="0.5")
 
 # Mostrar la figura completa
 plt.show()
-
 
